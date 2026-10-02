@@ -1,0 +1,6 @@
+{
+  "name": "Samarth Nagde — Portfolio",
+  "description": "Cinematic portfolio for Samarth Nagde — Video Editor, Cinematographer & Photographer.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
