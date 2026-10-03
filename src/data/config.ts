@@ -57,7 +57,7 @@ export interface PersonalConfig {
 }
 
 export const siteConfig: PersonalConfig = {
-  name: "SAMARTH NAGDE",
+  name: "SARNAGE.POV",
   eyebrow: "CREATIVE DIRECTION & POST-PRODUCTION",
   titles: ["Video Editor", "Cinematographer", "Photographer"],
   roleSubtitle: "Video Editor · Cinematographer · Photographer",
