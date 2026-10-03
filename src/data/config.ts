@@ -4,7 +4,9 @@
  */
 
 export interface PersonalConfig {
-  name: string;
+  name1: string;
+   name2: string;
+  logo: string;
   eyebrow: string;
   titles: string[];
   roleSubtitle: string;
@@ -57,7 +59,9 @@ export interface PersonalConfig {
 }
 
 export const siteConfig: PersonalConfig = {
-  name: "SARNAGE.POV",
+  name1:"Samarth Nagde" ,
+  name2:"Sanskar Nagde",
+  logo:"SARNAGE.POV",
   eyebrow: "CREATIVE DIRECTION & POST-PRODUCTION",
   titles: ["Video Editor", "Cinematographer", "Photographer"],
   roleSubtitle: "Video Editor · Cinematographer · Photographer",
