@@ -92,21 +92,21 @@ export const siteConfig: PersonalConfig = {
     headlineAccent: "LET'S WORK TOGETHER.",
     subheading: "Have a project, campaign, shoot or creative idea in mind? Let's turn it into something worth watching.",
     whatsapp: {
-      number: "+919876543210", // Easily replace with actual number
-      display: "+91 98765 43210",
-      url: "https://wa.me/919876543210?text=Hi%20Samarth%2C%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20discuss%20a%20project.",
+      number: "+917987698062", // Easily replace with actual number
+      display: "+91 79876 98062",
+      url: "https://wa.me/917987698062?text=Hi%20Samarth%2C%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20discuss%20a%20project.",
       description: "Fastest response for project inquiries & collaborations",
     },
     instagram: {
-      username: "@samarthnagde",
-      display: "@samarthnagde",
-      url: "https://instagram.com/samarthnagde",
+      username: "sarnage.pov", // Easily replace with actual username
+      display: "@sarnage.pov",
+      url: "https://instagram.com/sarnage.pov",
       description: "Direct messages, daily visual reels & behind the scenes",
     },
     email: {
-      address: "samarthnagde.films@gmail.com",
-      display: "samarthnagde.films@gmail.com",
-      url: "mailto:samarthnagde.films@gmail.com?subject=Project%20Inquiry%20%7C%20Samarth%20Nagde",
+      address: "sarnage6@gmail.com",
+      display: "sarnage6@gmail.com",
+      url: "mailto:sarnage6@gmail.com?subject=Project%20Inquiry%20%7C%20Samarth%20Nagde",
       description: "Official production briefs, treatment decks & proposals",
     },
   },
