@@ -85,7 +85,7 @@ export default function Navbar({ activeSection }: NavbarProps) {
           className="group flex items-center gap-2 font-display text-base sm:text-lg font-bold tracking-widest text-white transition-opacity hover:opacity-90"
         >
           <span className="relative">
-            {siteConfig.name}
+            {siteConfig.logo}
             <span className="absolute -bottom-1 left-0 h-[2px] w-0 bg-purple-500 transition-all duration-300 group-hover:w-full" />
           </span>
         </a>
