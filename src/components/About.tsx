@@ -4,7 +4,8 @@ import { ArrowRight, Film, Camera, Video, Sparkles } from "lucide-react";
 import { siteConfig } from "../data/config";
 
 export default function About() {
-  const [imageError, setImageError] = useState(false);
+  const [imageError1, setImageError1] = useState(false);
+  const [imageError2, setImageError2] = useState(false);
 
   const scrollToWork = () => {
     const workElem = document.getElementById("work");
@@ -70,7 +71,7 @@ export default function About() {
         {/* ================================================== */}
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-12 lg:gap-16 pt-4">
           {/* Left Column: Story & Bio */}
-          <div className="lg:col-span-7">
+          <div className="order-2 lg:order-1 lg:col-span-7">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -151,7 +152,7 @@ export default function About() {
           </div>
 
           {/* Right Column: Large Cinematic Portrait */}
-          <div className="lg:col-span-5">
+          <div className="order-1 lg:order-2 lg:col-span-5">
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
@@ -170,11 +171,11 @@ export default function About() {
 
               {/* Portrait Frame */}
               <div className="group relative aspect-[3/4] overflow-hidden rounded-xl border border-white/15 bg-[#09090e] shadow-2xl transition-all duration-500 hover:border-purple-500/40">
-                {!imageError ? (
+                {!imageError1 ? (
                   <img
                     src={siteConfig.about.portraitImage}
                     alt={siteConfig.about.portraitAlt}
-                    onError={() => setImageError(true)}
+                    onError={() => setImageError1(true)}
                     className="h-full w-full object-cover grayscale contrast-125 transition-transform duration-700 ease-out group-hover:scale-105 group-hover:grayscale-0"
                   />
                 ) : (
@@ -238,7 +239,7 @@ export default function About() {
       {/* ==================================================
           LEFT COLUMN: Large Cinematic Portrait
           ================================================== */}
-      <div className="lg:col-span-5">
+      <div className="order-1 lg:order-1 lg:col-span-5">
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
@@ -260,11 +261,11 @@ export default function About() {
           {/* Portrait Frame */}
           <div className="group relative aspect-[3/4] overflow-hidden rounded-xl border border-white/15 bg-[#09090e] shadow-2xl transition-all duration-500 hover:border-purple-500/40">
 
-            {!imageError ? (
+            {!imageError2 ? (
               <img
-                src={siteConfig.about.portraitImage}
+                src={siteConfig.about.portraitImage2}
                 alt={siteConfig.about.portraitAlt}
-                onError={() => setImageError(true)}
+                onError={() => setImageError2(true)}
                 className="h-full w-full object-cover grayscale contrast-125 transition-transform duration-700 ease-out group-hover:scale-105 group-hover:grayscale-0"
               />
             ) : (
@@ -319,7 +320,7 @@ export default function About() {
       {/* ==================================================
           RIGHT COLUMN: Story & Bio
           ================================================== */}
-      <div className="lg:col-span-7">
+      <div className="order-2 lg:order-2 lg:col-span-7">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
