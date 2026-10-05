@@ -131,30 +131,11 @@ export default function PortfolioCard({ item, onClick }: PortfolioCardProps) {
             <span>{item.category}</span>
           </div>
 
-          {item.duration && (
+          {/* {item.duration && (
             <span className="text-[11px] font-mono text-zinc-400 bg-black/60 backdrop-blur-md px-2 py-1 rounded-md border border-white/10">
               {item.duration}
             </span>
-          )}
-        </div>
-
-        {/* Center Hover Action Indicator */}
-        <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-10">
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{
-              opacity: isHovered ? 1 : 0,
-              scale: isHovered ? 1 : 0.8,
-            }}
-            transition={{ duration: 0.2 }}
-            className="flex h-14 w-14 items-center justify-center rounded-full border border-purple-500/50 bg-black/70 text-white backdrop-blur-md shadow-[0_0_20px_rgba(168,85,247,0.3)]"
-          >
-            {item.type === "video" ? (
-              <Play size={20} className="translate-x-0.5 text-purple-300 fill-purple-300" />
-            ) : (
-              <ArrowUpRight size={22} className="text-purple-300" />
-            )}
-          </motion.div>
+          )} */}
         </div>
 
         {/* Bottom Metadata */}

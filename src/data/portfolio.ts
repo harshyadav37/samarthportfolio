@@ -1,9 +1,12 @@
+import { useState } from "react";
+
 export type PortfolioCategory =
   | "ALL"
   | "VIDEO EDITING"
   | "CINEMATOGRAPHY"
   | "PHOTOGRAPHY"
   | "MOTION / VFX";
+
 
 export interface PortfolioItem {
   id: string;
@@ -39,8 +42,8 @@ export const portfolioItems: PortfolioItem[] = [
     category: "CINEMATOGRAPHY",
     type: "video",
     thumbnail: "/images/work/project-1.jpg",
-    video: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4",
-    previewVideo: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4",
+    video: "/video/video2.mp4",
+    previewVideo: "/video/video2.mp4",
     aspectRatio: "wide",
     gridSpan: "lg:col-span-2 lg:row-span-2",
     client: "Aura Pictures & Indie Cinema",
@@ -58,8 +61,8 @@ export const portfolioItems: PortfolioItem[] = [
     category: "VIDEO EDITING",
     type: "video",
     thumbnail: "/images/work/project-2.jpg",
-    video: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/WeAreGoingOnBullrun.mp4",
-    previewVideo: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/WeAreGoingOnBullrun.mp4",
+    video: "/video/video2.mp4",
+    previewVideo: "/video/video2.mp4",
     aspectRatio: "landscape",
     gridSpan: "lg:col-span-1 lg:row-span-1",
     client: "Apex Urban Footwear",

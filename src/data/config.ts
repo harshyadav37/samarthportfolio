@@ -18,6 +18,7 @@ export interface PersonalConfig {
     primaryStatement: string;
     bioParagraph: string;
     portraitImage: string;
+    portraitImage2: string;
     portraitAlt: string;
     experienceYears: string;
     projectsCompleted: string;
@@ -79,7 +80,8 @@ export const siteConfig: PersonalConfig = {
     greeting: "Hi, I'm",
     primaryStatement: "I am a Video Editor, Cinematographer & Photographer focused on transforming ideas into visually compelling stories.",
     bioParagraph: "I create visual stories that connect emotion, atmosphere and narrative. From capturing cinematic footage to shaping the final edit, I work across the complete visual journey — from shoot to screen.",
-    portraitImage: "/images/samarth.jpg",
+    portraitImage: "/images/bella1.jpg",
+    portraitImage2: "/images/bella2.jpg",
     portraitAlt: "Samarth Nagde — Filmmaker, Cinematographer and Video Editor",
     experienceYears: "5+",
     projectsCompleted: "120+",
