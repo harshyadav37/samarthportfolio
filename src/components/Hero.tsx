@@ -10,7 +10,6 @@ export default function Hero() {
   const videoRef = useRef<HTMLVideoElement>(null);
 
   const { scrollY } = useScroll();
-  const heroParallax = useTransform(scrollY, [0, 600], [0, 150]);
   const heroOpacity = useTransform(scrollY, [0, 450], [1, 0.2]);
 
   const togglePlay = () => {
@@ -41,13 +40,10 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative flex min-h-screen w-full flex-col justify-between overflow-hidden bg-[#050507]"
+      className="relative flex aspect-[1.3] min-h-[260px] max-h-screen w-full flex-col justify-between overflow-hidden bg-[#050507] md:aspect-auto md:min-h-screen"
     >
       {/* Background Visual Container with Parallax */}
-      <motion.div
-        style={{ y: heroParallax }}
-        className="absolute inset-0 h-[115%] w-full select-none"
-      >
+      <div className="absolute inset-0 h-full w-full select-none">
         {/* Video Element */}
         <video
           ref={videoRef}
@@ -56,7 +52,7 @@ export default function Hero() {
           loop
           playsInline
           onLoadedData={() => setVideoLoaded(true)}
-          className={`h-full w-full object-cover transition-opacity duration-1000 ${
+          className={`h-full w-full object-contain object-center transition-opacity duration-1000 ${
             videoLoaded ? "opacity-75" : "opacity-0"
           }`}
           poster={siteConfig.hero.bannerImage}
@@ -83,22 +79,22 @@ export default function Hero() {
         <div className="absolute inset-0 bg-gradient-to-t from-[#050507] via-[#050507]/40 to-transparent" />
         <div className="absolute inset-0 bg-gradient-to-r from-[#050507]/80 via-transparent to-[#050507]/80" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_30%,#050507_90%)]" />
-      </motion.div>
+      </div>
 
       {/* Top Spacer for fixed navbar */}
-      <div className="h-28" />
+      <div className="h-20 sm:h-28" />
 
       {/* Hero Content — Minimal, Cinematic, High-Character */}
       <motion.div
         style={{ opacity: heroOpacity }}
-        className="relative z-10 mx-auto w-full max-w-7xl px-6 md:px-12 py-12"
+        className="relative z-10 mx-auto w-full max-w-7xl px-6 py-2 sm:py-12 md:px-12"
       >
         <div className="relative max-w-4xl">
           {/* Subtle Glow Gradient behind hero headline */}
           <div className="pointer-events-none absolute -left-12 -top-12 h-64 w-96 rounded-full bg-[radial-gradient(circle,_rgba(168,85,247,0.18)_0%,_transparent_70%)] blur-3xl" />
 
           {/* Eyebrow Label */}
-          <motion.div
+          {/* <motion.div
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
@@ -108,7 +104,7 @@ export default function Hero() {
             <span className="font-mono text-xs tracking-[0.25em] text-zinc-400 uppercase">
               {siteConfig.eyebrow}
             </span>
-          </motion.div>
+          </motion.div> */}
 
           {/* Main Visual Name Headline */}
           <motion.h1
@@ -117,34 +113,34 @@ export default function Hero() {
             transition={{ duration: 0.9, delay: 0.35, ease: [0.16, 1, 0.3, 1] }}
             className="font-display text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tight text-white uppercase text-balance leading-[0.95]"
           >
-            {siteConfig.name}
+            {/* {siteConfig.name1} {siteConfig.name2} */}
           </motion.h1>
 
           {/* Subtitle / Roles */}
-          <motion.div
+          {/* <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.55 }}
             className="mt-6 flex flex-wrap items-center gap-2 sm:gap-3 text-sm sm:text-base md:text-lg text-zinc-300 font-sans tracking-wide"
           >
-            <span className="text-zinc-200">Video Editor</span>
+            {/* <span className="text-zinc-200">Video Editor</span>
             <span className="text-purple-400 font-bold">/</span>
             <span className="text-zinc-200">Cinematographer</span>
             <span className="text-purple-400 font-bold">/</span>
-            <span className="text-zinc-200">Photographer</span>
-          </motion.div>
+            <span className="text-zinc-200">Photographer</span> */}
+          {/* </motion.div>  */}
         </div>
       </motion.div>
 
       {/* Bottom Bar: Scroll Indicator & Media Reel Controls */}
-      <div className="relative z-20 mx-auto flex w-full max-w-7xl items-end justify-between px-6 pb-10 md:px-12">
+      <div className="relative z-20 mx-auto flex w-full max-w-7xl items-end justify-between px-6 pb-3 sm:pb-10 md:px-12">
         {/* Scroll Indicator */}
         <motion.button
           onClick={scrollToAbout}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 0.8 }}
-          className="group flex items-center gap-3 text-left text-xs font-mono tracking-widest text-zinc-400 transition-colors hover:text-white"
+          className="group  relative z-30 flex items-center gap-3 rounded-full border border-white/20 bg-[#050507]/75 px-3 py-2 text-left text-xs font-mono tracking-widest text-white shadow-lg backdrop-blur-md transition-colors hover:border-purple-400/50"
         >
           <div className="flex h-9 w-9 items-center justify-center rounded-full border border-white/15 bg-white/5 transition-transform duration-300 group-hover:scale-110 group-hover:border-purple-400/50">
             <motion.div
@@ -161,26 +157,26 @@ export default function Hero() {
 
         {/* Ambient Reel Play/Mute Controls */}
         <div className="hidden sm:flex items-center gap-2 rounded-full border border-white/10 bg-black/40 px-3 py-1.5 backdrop-blur-md">
-          <button
+          {/* <button
             type="button"
             onClick={togglePlay}
             aria-label={isPlaying ? "Pause background reel" : "Play background reel"}
             className="p-1 text-zinc-400 hover:text-white transition-colors"
           >
             {isPlaying ? <Pause size={14} /> : <Play size={14} />}
-          </button>
+          </button> */}
           <div className="h-3 w-[1px] bg-white/10" />
-          <button
+          {/* <button
             type="button"
             onClick={toggleSound}
             aria-label={isMuted ? "Unmute reel audio" : "Mute reel audio"}
             className="p-1 text-zinc-400 hover:text-white transition-colors"
           >
             {isMuted ? <VolumeX size={14} /> : <Volume2 size={14} className="text-purple-400" />}
-          </button>
-          <span className="text-[10px] font-mono text-zinc-500 uppercase tracking-wider pl-1">
+          </button> */}
+          {/* <span className="text-[10px] font-mono text-zinc-500 uppercase tracking-wider pl-1">
             Reel Preview
-          </span>
+          </span> */}
         </div>
       </div>
     </section>

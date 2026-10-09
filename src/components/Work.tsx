@@ -37,7 +37,7 @@ export default function Work() {
   };
 
   return (
-    <section id="work" className="relative w-full bg-[#050507] py-24 md:py-36">
+    <section id="work" className="relative w-full overflow-x-clip bg-[#050507] py-24 md:py-36">
       {/* Background ambient lighting */}
       <div className="pointer-events-none absolute top-1/3 left-1/2 -translate-x-1/2 h-[500px] w-[800px] rounded-full bg-purple-950/15 blur-[160px]" />
 
