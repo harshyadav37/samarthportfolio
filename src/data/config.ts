@@ -70,8 +70,8 @@ export const siteConfig: PersonalConfig = {
   subtagline: "Creative shoots, cinematic visuals and professional editing — everything you need to bring your vision to life.",
 
   hero: {
-    bannerImage: "/images/hero-banner.jpg",
-    bannerVideo: "/videos/hero.mp4",
+    bannerImage: "/images/b1.jpg",
+    bannerVideo: "/video/b1.mp4",
     scrollText: "SCROLL TO EXPLORE",
   },
 

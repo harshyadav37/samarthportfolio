@@ -77,12 +77,12 @@ export default function Navbar({ activeSection }: NavbarProps) {
           : "bg-transparent border-b border-transparent py-5"
       }`}
     >
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 md:px-12">
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-4 sm:px-6 md:px-12">
         {/* Brand Zone: Single element wordmark */}
         <a
           href="#home"
           onClick={(e) => handleLinkClick(e, "#home")}
-          className="group flex items-center gap-2 font-display text-base sm:text-lg font-bold tracking-widest text-white transition-opacity hover:opacity-90"
+          className="group flex shrink-0 items-center gap-2 whitespace-nowrap font-display text-sm font-bold tracking-[0.12em] text-white transition-opacity hover:opacity-90 sm:text-lg sm:tracking-widest"
         >
           <span className="relative">
             {siteConfig.logo}
@@ -117,7 +117,7 @@ export default function Navbar({ activeSection }: NavbarProps) {
         </nav>
 
         {/* Right side: Contact Dropdown Button & Mobile Menu Toggle */}
-        <div className="flex items-center gap-3">
+        <div className="flex shrink-0 items-center gap-2 sm:gap-3">
           {/* Contact Popover Trigger */}
           <div className="relative" ref={contactDropdownRef}>
             <button
@@ -125,7 +125,7 @@ export default function Navbar({ activeSection }: NavbarProps) {
               onClick={() => setIsContactOpen(!isContactOpen)}
               aria-expanded={isContactOpen}
               aria-label="Open contact options"
-              className={`flex items-center gap-2 rounded-full border px-4 py-2 text-xs font-medium tracking-wider uppercase transition-all duration-200 ${
+              className={`flex items-center gap-1.5 whitespace-nowrap rounded-full border px-2.5 py-2 text-[10px] font-medium tracking-[0.08em] uppercase transition-all duration-200 sm:gap-2 sm:px-4 sm:text-xs sm:tracking-wider ${
                 isContactOpen
                   ? "border-purple-500/50 bg-purple-950/40 text-purple-200 shadow-[0_0_15px_rgba(168,85,247,0.25)]"
                   : "border-white/15 bg-white/5 text-zinc-200 hover:border-white/30 hover:bg-white/10"
@@ -265,7 +265,7 @@ export default function Navbar({ activeSection }: NavbarProps) {
               {/* Header inside drawer */}
               <div className="flex items-center justify-between pb-6 border-b border-white/10">
                 <span className="font-display text-sm font-bold tracking-widest text-white">
-                  {siteConfig.name}
+                  {siteConfig.logo}
                 </span>
                 <button
                   type="button"
