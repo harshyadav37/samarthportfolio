@@ -45,8 +45,8 @@ const videoProjects: Array<{
    { filename: "t1.mp4", category: "VIDEO EDITING" },
   // { filename: "s5.mp4", category: "MOTION / VFX" },
   // { filename: "s4.mp4", category: "MOTION / VFX" },
-  // { filename: "s3.mp4", category: "MOTION / VFX" },
-  // { filename: "c1.mp4", category: "VIDEO EDITING" },
+   { filename: "s3.mp4", category: "MOTION / VFX" },
+   { filename: "c1.mp4", category: "VIDEO EDITING" },
   
   { filename: "b1.mov", category: "CINEMATOGRAPHY" },
   // { filename: "r1.mp4", category: "VIDEO EDITING" },
