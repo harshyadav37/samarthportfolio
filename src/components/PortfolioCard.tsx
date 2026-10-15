@@ -142,12 +142,12 @@ export default function PortfolioCard({ item, onClick }: PortfolioCardProps) {
         <div className="absolute bottom-0 left-0 right-0 p-5 z-10">
           <div className="flex items-end justify-between gap-4">
             <div>
-              <p className="text-xs font-mono tracking-wider text-purple-400">
+              {/* <p className="text-xs font-mono tracking-wider text-purple-400">
                 {item.client || "Self-Directed"} · {item.year}
-              </p>
-              <h3 className="font-display text-lg sm:text-xl font-bold tracking-tight text-white transition-colors group-hover:text-purple-200">
+              </p> */}
+              {/* <h3 className="font-display text-lg sm:text-xl font-bold tracking-tight text-white transition-colors group-hover:text-purple-200">
                 {item.title}
-              </h3>
+              </h3> */}
               <p className="mt-1 text-xs text-zinc-400 line-clamp-1">
                 {item.role}
               </p>
